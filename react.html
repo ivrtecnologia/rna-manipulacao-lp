@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RNA — React Dr. Rodrigo Schröder</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0d0d11;color:#e8e8ec;line-height:1.7;padding:20px}
+.container{max-width:780px;margin:0 auto}
+h1{text-align:center;font-size:1.5rem;font-weight:800;margin-bottom:4px}
+h1 span{color:#D4A000}
+.sub{text-align:center;color:#888;font-size:.88rem;margin-bottom:8px}
+
+.narrativa{background:rgba(212,160,0,.05);border:1px solid rgba(212,160,0,.15);border-radius:12px;padding:18px 20px;margin-bottom:32px;text-align:center}
+.narrativa-label{font-size:.65rem;font-weight:800;color:#D4A000;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+.narrativa-text{font-size:.95rem;color:#ccc;line-height:1.8}
+.narrativa-text strong{color:#f0c530}
+
+.reel{background:#16161e;border-radius:14px;padding:24px;margin-bottom:20px;border:1px solid #2a2a35;border-left:4px solid #8a1a50}
+
+.reel-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.reel-data{font-weight:700;font-size:.9rem}
+.tag{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.tag-felipe{background:rgba(138,26,80,.2);color:#c44a8a;border:1px solid rgba(138,26,80,.4)}
+.tag-react{background:rgba(212,160,0,.15);color:#D4A000;border:1px solid rgba(212,160,0,.3)}
+
+.reel-title{font-size:1.2rem;font-weight:800;margin-bottom:4px}
+.reel-contexto{font-size:.82rem;color:#888;margin-bottom:14px;font-style:italic}
+
+.box{border-radius:10px;padding:12px 16px;margin-bottom:14px}
+.box-gravar{background:rgba(138,26,80,.08);border:1px dashed rgba(138,26,80,.35)}
+.box-hook{background:rgba(212,160,0,.06);border-left:4px solid #D4A000}
+.box-cta{background:rgba(212,160,0,.06);border:1px solid rgba(212,160,0,.2)}
+.box-ref{background:rgba(100,100,255,.05);border:1px solid rgba(100,100,255,.15)}
+.box-label{font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.box-label.gravar{color:#c44a8a}
+.box-label.hook{color:#D4A000}
+.box-label.cta{color:#D4A000}
+.box-label.ref{color:#7788cc}
+.box-text{font-size:.9rem;color:#ccc}
+.box-text.hook-text{font-size:1rem;font-weight:700;color:#f0c530;font-style:italic}
+.box-text.cta-text{font-size:.9rem;font-weight:700;color:#f0c530}
+
+.roteiro-label{font-size:.68rem;font-weight:800;color:#666;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;margin-top:8px}
+.linha{padding:5px 0;font-size:.9rem}
+.dir{color:#555;font-style:italic;font-size:.82rem}
+.fala{color:#e8e8ec}
+.medico{color:#7788cc;font-style:italic}
+.tela{background:rgba(212,160,0,.1);color:#f0c530;padding:1px 6px;border-radius:4px;font-size:.8rem;font-weight:600}
+.pausa{background:rgba(255,50,50,.08);border:1px solid rgba(255,50,50,.15);border-radius:8px;padding:8px 14px;margin:8px 0}
+.pausa-label{font-size:.6rem;font-weight:800;color:#ff5555;text-transform:uppercase;letter-spacing:.1em}
+.pausa-text{font-size:.88rem;color:#ff9999}
+
+.footer{text-align:center;padding:40px 0 20px;color:#444;font-size:.75rem}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>RNA <span>Manipulacao</span></h1>
+<div class="sub">React — Dr. Rodrigo Schroder x Felipe (RNA)</div>
+
+<div class="narrativa">
+  <div class="narrativa-label">Contexto do React</div>
+  <div class="narrativa-text">
+    <strong>Video original:</strong> Dr. Rodrigo Schroder (@rodrigoschroder) fala sobre mulheres que emagrecem perdendo musculo, sarcopenia, e por que a balanca nao significa corpo melhor.<br><br>
+    <strong>Angulo do Felipe:</strong> Confirmar como farmaceutico que ve isso todo dia — gente comemorando perda de peso que na verdade e perda de musculo. Conectar com suplementacao personalizada (proteina, colageno, vitamina D, magnesio) como parte da solucao.<br><br>
+    <strong>Encaixe na narrativa RNA:</strong> O publico ja conhece o Felipe (Reels 1-4). Agora ele aparece reagindo a um medico de referencia — isso gera autoridade por associacao.
+  </div>
+</div>
+
+<!-- REACT -->
+<div class="reel">
+  <div class="reel-top">
+    <div class="reel-data">React — Dr. Rodrigo Schroder</div>
+    <div>
+      <span class="tag tag-felipe">Felipe grava</span>
+      <span class="tag tag-react">Formato React</span>
+    </div>
+  </div>
+
+  <div class="reel-title">"Perder peso nao e emagrecer. E isso que ninguem te conta."</div>
+  <div class="reel-contexto">Felipe reage ao video do Dr. Rodrigo Schroder sobre perda de massa muscular vs perda de peso. Formato lado a lado: video do medico + Felipe reagindo e complementando com visao de farmaceutico.</div>
+
+  <div class="box box-ref">
+    <div class="box-label ref">Video Original</div>
+    <div class="box-text">
+      Dr. Rodrigo Schroder — <a href="https://www.instagram.com/p/DWtgW64kT_q/" style="color:#7788cc">instagram.com/p/DWtgW64kT_q/</a><br>
+      Tema: Mulheres que perdem peso na balanca mas perdem musculo, sarcopenia, importancia de treino de forca + proteina + hormonios bem conduzidos.
+    </div>
+  </div>
+
+  <div class="box box-gravar">
+    <div class="box-label gravar">Como Gravar</div>
+    <div class="box-text">
+      <strong>Opcao 1 (mais facil):</strong> Coloca o video do Dr. Rodrigo rodando no notebook. Abre a camera frontal do celular. Grava voce assistindo e reagindo. Manda os dois arquivos (video original + sua reacao) que a IVR monta lado a lado na edicao.<br><br>
+      <strong>Opcao 2 (direto no Instagram):</strong> Vai no Reel do Dr. Rodrigo > clica nos 3 pontinhos > "Remix" (se disponivel). O Instagram ja monta o lado a lado automatico.<br><br>
+      <strong>Dica:</strong> NAO precisa decorar nada. Assiste o video, pausa nos momentos marcados abaixo e fala naturalmente. O importante e ser autentico — concordar, complementar, dar sua visao de farmaceutico.
+    </div>
+  </div>
+
+  <div class="box box-hook">
+    <div class="box-label hook">Hook — 3 Primeiros Segundos</div>
+    <div class="box-text hook-text">"Esse medico falou o que eu vejo TODA SEMANA na farmacia."</div>
+  </div>
+
+  <div class="roteiro-label">Roteiro do React</div>
+
+  <!-- INICIO -->
+  <div class="linha"><span class="dir">[Felipe olhando pra camera, antes de dar play no video]</span></div>
+  <div class="linha"><span class="fala">"Esse medico falou o que eu vejo toda semana na farmacia. Bora reagir."</span></div>
+  <div class="linha"><span class="dir">[Da play no video do Dr. Rodrigo]</span></div>
+
+  <!-- TRECHO 1 -->
+  <div class="linha"><span class="medico">Dr. Rodrigo: "O numero baixo na balanca nao significa corpo melhor. A maioria corta comida, passa fome, perde forca, perde musculo, perde presenca. E comemora porque entrou numa calca 38."</span></div>
+
+  <div class="pausa">
+    <div class="pausa-label">Pausa + Felipe Reage</div>
+    <div class="pausa-text">Felipe pausa o video e fala:</div>
+  </div>
+  <div class="linha"><span class="fala">"Isso aqui e exatamente o que eu vejo. A pessoa chega na farmacia: 'Felipe, perdi 3 quilos!' Ai eu pergunto: voce fez bioimpedancia? Voce sabe se perdeu gordura ou musculo? Porque na maioria das vezes... perdeu musculo."</span></div>
+
+  <div class="linha"><span class="dir">[Da play de novo]</span></div>
+
+  <!-- TRECHO 2 -->
+  <div class="linha"><span class="medico">Dr. Rodrigo: "Se voce emagrece sem proteger musculo, o corpo nao fica melhor. Fica mais fragil. E sem musculo voce perde justamente o que sustentava forca, gasto energetico, contorno corporal, protecao articular e presenca."</span></div>
+
+  <div class="pausa">
+    <div class="pausa-label">Pausa + Felipe Reage</div>
+    <div class="pausa-text">Felipe pausa e complementa:</div>
+  </div>
+  <div class="linha"><span class="fala">"E e ai que entra a suplementacao certa. Nao e tomar qualquer whey de prateleira. E voce ter a proteina na dose que o SEU corpo precisa, com os ativos certos pro seu objetivo. Colageno, vitamina D, magnesio, creatina — tudo ajustado. E isso que a gente faz aqui na RNA."</span></div>
+
+  <div class="linha"><span class="dir">[Da play de novo]</span></div>
+
+  <!-- TRECHO 3 -->
+  <div class="linha"><span class="medico">Dr. Rodrigo: "Quem protege estrutura e treino de forca, proteina suficiente, sono decente e hormonio bem conduzido quando existe indicacao."</span></div>
+
+  <div class="pausa">
+    <div class="pausa-label">Pausa + Felipe Reage</div>
+    <div class="pausa-text">Felipe pausa — momento final:</div>
+  </div>
+  <div class="linha"><span class="fala">"Treino de forca, proteina suficiente, sono decente. Olha so: dois dos tres a gente resolve aqui. A proteina manipulada na dose certa pro seu corpo, e o magnesio que te faz dormir como um anjo. O treino e com voce."</span></div>
+
+  <!-- FECHAMENTO -->
+  <div class="linha"><span class="dir">[Felipe olha pra camera, encerra]</span></div>
+  <div class="linha"><span class="fala">"Se voce ta emagrecendo e nao sabe o que ta perdendo, me chama no WhatsApp. A gente monta o protocolo certo pra voce perder gordura e MANTER musculo."</span></div>
+
+  <div class="box box-cta">
+    <div class="box-label cta">CTA — Texto na Tela</div>
+    <div class="box-text cta-text">Emagrecer sem perder musculo. WhatsApp na bio.</div>
+  </div>
+</div>
+
+<!-- NOTAS FINAIS -->
+<div class="narrativa" style="margin-top:20px">
+  <div class="narrativa-label">Notas para Edicao (IVR)</div>
+  <div class="narrativa-text" style="text-align:left">
+    <strong>Formato:</strong> Tela dividida — video do Dr. Rodrigo na esquerda, Felipe na direita.<br>
+    <strong>Pausas:</strong> Nos 3 momentos marcados, o video do medico congela e o Felipe fala. Destacar visualmente (zoom leve no Felipe, escurecer o lado do medico).<br>
+    <strong>Legenda:</strong> Obrigatoria em todo o video — tanto na fala do medico quanto do Felipe.<br>
+    <strong>Duracao estimada:</strong> 60-75 segundos.<br>
+    <strong>Credito:</strong> Colocar @rodrigoschroder no video + marcar no post.<br>
+    <strong>Musica:</strong> Sem musica de fundo. Audio limpo.<br>
+    <strong>Logo:</strong> Logo RNA no final, sobre fundo escuro, por 2 segundos.<br><br>
+    <strong>Importante:</strong> Felipe ja avisou que vai mandar mensagem pro Dr. Rodrigo avisando do react. Aguardar confirmacao dele antes de postar.
+  </div>
+</div>
+
+<div class="narrativa" style="margin-top:16px">
+  <div class="narrativa-label">Legenda do Post (Instagram)</div>
+  <div class="narrativa-text" style="text-align:left;font-size:.88rem">
+    Perder peso nao e emagrecer.<br><br>
+    Esse video do @rodrigoschroder e cirurgico. E exatamente o que eu vejo toda semana na farmacia: gente comemorando numero na balanca sem saber que ta perdendo musculo, forca e saude.<br><br>
+    A balanca nao conta a historia inteira. O que sustenta seu corpo e musculo — e musculo precisa de proteina na dose certa, nao de dieta maluca.<br><br>
+    Na RNA a gente monta o protocolo certo pro seu corpo. Proteina, colageno, vitamina D, magnesio, creatina — tudo manipulado na sua dose.<br><br>
+    Quer parar de emagrecer errado? Link na bio.<br><br>
+    #manipulacao #farmacia #emagrecimento #massamuscular #sarcopenia #suplementacao #proteina #rnamanipulacao #saude #performance
+  </div>
+</div>
+
+<div class="footer">
+  RNA Manipulacao Farmaceutica — React por IVR Tecnologia<br>Abril 2026
+</div>
+
+</div>
+</body>
+</html>
